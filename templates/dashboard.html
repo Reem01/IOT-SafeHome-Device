@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SafeHome - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg">
+
+<div class="top-bar">
+    <div class="top-left">
+        <span class="logo-sm">SafeHome</span>
+    </div>
+    <div class="top-right">
+        <span class="welcome-text">Hello, {{ username }}</span>
+        <a href="{{ url_for('logout') }}" class="top-link">Logout</a>
+    </div>
+</div>
+
+<div class="dash-center">
+    <div class="dash-card">
+        <h1>Dashboard</h1>
+        <p>Manage your smart home devices and keep their passwords safe and up-to-date.</p>
+
+        <div class="dash-buttons">
+            <a class="btn primary-btn" href="{{ url_for('devices') }}">View Devices</a>
+            <a class="btn secondary-btn" href="{{ url_for('add_device') }}">Add Device</a>
+            <a class="btn outline-btn" href="{{ url_for('tips') }}">Security Tips</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

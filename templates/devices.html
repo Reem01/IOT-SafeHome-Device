@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SafeHome - Devices</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+   
+    </style>
+</head>
+<body class="bg">
+
+<div class="top-bar">
+    <div class="top-left">
+        <a href="{{ url_for('dashboard') }}" class="top-link">Dashboard</a>
+    </div>
+    <div class="top-right">
+        <a href="{{ url_for('add_device') }}" class="top-link">Add Device</a>
+        <a href="{{ url_for('tips') }}" class="top-link">Security Tips</a>
+        <a href="{{ url_for('logout') }}" class="top-link">Logout</a>
+    </div>
+</div>
+
+<div class="table-container">
+
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="alert {{ category }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for d in devices %}
+            <tr>
+                <td>{{ d.name }}</td>
+                <td>{{ d.type }}</td>
+                <td>••••••••••</td>
+                <td>
+                    <a class="table-btn edit" href="{{ url_for('edit_device', device_id=d.id) }}">Edit</a>
+                    <a class="table-btn delete" href="{{ url_for('delete_device', device_id=d.id) }}">Delete</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" style="text-align:center;">No devices added yet.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

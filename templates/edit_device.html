@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Device - SafeHome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg">
+
+<div class="top-bar">
+    <div class="top-left">
+        <a href="{{ url_for('dashboard') }}" class="top-link">Dashboard</a>
+    </div>
+    <div class="top-right">
+        <a href="{{ url_for('devices') }}" class="top-link">Devices</a>
+        <a href="{{ url_for('logout') }}" class="top-link">Logout</a>
+    </div>
+</div>
+
+<div class="form-container">
+    <h2>Edit Device</h2>
+
+    <form method="POST">
+        <input type="text" name="name" value="{{ device.name }}" required class="input-field"><br>
+        <input type="text" name="type" value="{{ device.type }}" required class="input-field"><br>
+        <input type="text" name="password" value="{{ device.password }}" required class="input-field"><br>
+        <button type="submit" class="btn primary-btn">Save Changes</button>
+    </form>
+</div>
+
+</body>
+</html>

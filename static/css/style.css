@@ -1,0 +1,244 @@
+/* خلفية عامة */
+/* لو تبين صورة خلفية حطي رابطها هنا بدل YOUR_IMAGE_URL */
+body.bg {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0a3d2c; 
+    background-image: url("https://t4.ftcdn.net/jpg/02/55/63/05/360_F_255630580_OwTr2SjKS2aob36NNvatP2gRlQeVX1Ul.jpg"); /* عدليه لرابط صورة، أو امسحي السطر لو ما تبين صورة */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.auth-container,
+.dash-center,
+.form-container,
+.table-container,
+.tips-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.auth-box,
+.dash-card,
+.form-container,
+.table-container > div,
+.tips-container > div {
+    background: rgba(0, 85, 45, 0.85);
+}
+
+.auth-box,
+.dash-card,
+.form-container,
+.table-container,
+.tips-container {
+    width: 420px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 25px 30px;
+    background: rgba(0, 85, 45, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.logo {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+.logo-sm {
+    font-weight: bold;
+}
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.btn,
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.primary-btn {
+    background: #15a24a;
+    color: #fff;
+}
+.primary-btn:hover {
+    background: #0e7a37;
+}
+
+.secondary-btn {
+    background: #ffffff;
+    color: #0a3d2c;
+}
+.secondary-btn:hover {
+    background: #e0f2e9;
+}
+
+.outline-btn {
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+}
+.outline-btn:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.switch-text {
+    margin-top: 14px;
+    font-size: 13px;
+}
+.switch-text a {
+    color: #a9ffcb;
+}
+
+.alert {
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.alert.success {
+    background: #1e9e5a;
+}
+.alert.danger {
+    background: #c0392b;
+}
+.alert.warning {
+    background: #f39c12;
+}
+.alert.info {
+    background: #2980b9;
+}
+
+.top-bar {
+    height: 50px;
+    background: rgba(0, 60, 32, 0.9);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.top-link {
+    color: #d7ffe4;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.top-link:hover {
+    text-decoration: underline;
+}
+.welcome-text {
+    margin-right: 10px;
+}
+
+.dash-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dash-card {
+    text-align: center;
+}
+.dash-buttons .btn {
+    margin: 8px;
+}
+
+.table-container {
+    width: 80%;
+    max-width: 900px;
+}
+.table-container h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+th {
+    background: #e9f7ef;
+    text-align: left;
+}
+tr:hover td {
+    background: #f4fbf7;
+}
+
+.table-btn {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+.table-btn.edit {
+    background: #27ae60;
+    color: #fff;
+}
+.table-btn.delete {
+    background: #c0392b;
+    color: #fff;
+}
+
+
+.tips-container {
+    width: 600px;
+    max-width: 90%;
+}
+.tips-container ul {
+    text-align: left;
+}
+.tips-container li {
+    margin-bottom: 8px;
+}
+
+.form-container {
+    text-align: center;       
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;    
+    align-items:center;      
+}
+.input-field {
+    width: 80%;                
+    max-width: 400px;          
+    margin-bottom: 15px;      
+}
+
+.primary-btn {
+    width: 350px;    
+     
+}

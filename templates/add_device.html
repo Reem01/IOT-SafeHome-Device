@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Device - SafeHome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg">
+
+<div class="top-bar">
+    <div class="top-left">
+        <a href="{{ url_for('dashboard') }}" class="top-link">Dashboard</a>
+    </div>
+    <div class="top-right">
+        <a href="{{ url_for('devices') }}" class="top-link">Devices</a>
+        <a href="{{ url_for('logout') }}" class="top-link">Logout</a>
+    </div>
+</div>
+
+<div class="form-container">
+
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="alert {{ category }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Device Name" required class="input-field"><br>
+        <input type="text" name="type" placeholder="Device Type (e.g., Router, Camera)" required class="input-field"><br>
+        <input type="text" name="password" placeholder="Device Password" required class="input-field"><br>
+        <button type="submit" class="btn primary-btn">Add Device</button>
+    </form>
+</div>
+
+</body>
+</html>
